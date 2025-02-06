@@ -1,0 +1,50 @@
+﻿<Window x:Class="Projekt_Czesc1_PH.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_Czesc1_PH"
+        mc:Ignorable="d"
+        Title="PainterTool by Paweł Hajok" Height="450" Width="800">
+    <Grid>
+        <Canvas Name="paintSurface" MouseMove="paintSurface_MouseMove" MouseLeftButtonDown="paintSurface_MouseLeftButtonDown" MouseDown="paintSurface_MouseDown" MouseLeftButtonUp="paintSurface_MouseLeftButtonUp">
+            <Canvas.Background>
+                <SolidColorBrush Color="White" Opacity="1"/>
+            </Canvas.Background>
+        </Canvas>
+        <ToolBarPanel>
+            <ToolBar Height="29">
+                <Button x:Name="file" Margin="5,0,0,0" Click="file_Click">Plik</Button>
+                <Button x:Name="default" Content="Rysuj dowolnie" Click="default_Click"/>
+                <Button x:Name="point" Content="Rysuj punkty" Click="point_Click"/>
+                <Menu>
+                    <MenuItem Header="Odcinki">
+                        <MenuItem x:Name="drawSegment" Header="Rysuj odcinek" Click="drawSegment_Click"/>
+                        <MenuItem x:Name="editSegment" Header="Edytuj odcinek" Click="editSegment_Click" />
+                    </MenuItem>
+                </Menu>
+                <Menu>
+                    <MenuItem Header="Kształty">
+                        <MenuItem x:Name="drawPolygon" Header="Prostokąt" Click="drawPolygon_Click" />
+                        <MenuItem x:Name="drawRectangle" Header="Wielokąt" Click="drawRectangle_Click" />
+                        <MenuItem x:Name="drawCircle" Header="Okrąg" Click="drawCircle_Click" />
+                        <MenuItem x:Name="drawCurvedLine" Header="Krzywa" Click="drawCurvedLine_Click"/>
+                        <MenuItem x:Name="drawTree" Header="Choinka" Click="drawTree_Click"/>
+                        <MenuItem x:Name="drawPlus" Header="Plus" Click="drawPlus_Click"/>
+                        <MenuItem x:Name="drawCherry" Header="Wiśnia" Click="drawCherry_Click"/>
+                        <MenuItem x:Name="drawSnowball" Header="Śnieżka" Click="drawSnowball_Click"/>
+                    </MenuItem>
+                </Menu>
+                <Rectangle x:Name="colorPicker" Height="20" Width="20" Fill="Black" Margin="3,0,0,0" MouseLeftButtonDown="colorPicker_MouseLeftButtonDown"/>
+                <Button x:Name="filterImage" Content="Filtruj obraz" Margin="5,0,0,0" Click="filterImage_Click"/>
+                <Button x:Name="filterMatrix" Content="Filtracja macierzowa" Margin="5,0,0,0" Click="filterMatrix_Click"/>
+                <Menu>
+                    <MenuItem Header="Czyszczenie">
+                        <MenuItem x:Name="eraser" Header="Gumka" Click="eraser_Click"/>
+                        <MenuItem x:Name="clearCanvas" Header="Wyczyść wszystko" Click="clearCanvas_Click"/>
+                    </MenuItem>
+                </Menu>
+            </ToolBar>
+        </ToolBarPanel>
+    </Grid>
+</Window>

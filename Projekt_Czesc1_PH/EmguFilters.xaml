@@ -1,0 +1,25 @@
+﻿<Window x:Class="Projekt_Czesc1_PH.EmguFilters"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekt_Czesc1_PH"
+        mc:Ignorable="d"
+        Title="Filtry Podstawowe" Height="600" Width="900">
+    <Grid>
+        <Canvas Name="imageSurface" Width="500" Height="500" Margin="70,17,330,17">
+            <Canvas.Background>
+                <SolidColorBrush Color="Black" Opacity="1"/>
+            </Canvas.Background>
+            <Canvas/>
+        </Canvas>
+        <Button x:Name="loadImage" Content="Wczytaj obraz" HorizontalAlignment="Left" Margin="724,117,0,0" VerticalAlignment="Top" Width="91" Click="loadImage_Click"/>
+        <Button x:Name="resetImage" Content="Resetuj obraz" HorizontalAlignment="Left" Margin="724,152,0,0" VerticalAlignment="Top" Width="91" Click="resetImage_Click"/>
+        <Button x:Name="sobelFilter" Content="Sobel" HorizontalAlignment="Left" Margin="724,278,0,0" VerticalAlignment="Top" Width="91" Click="sobelFilter_Click"/>
+        <Label Content="Filtry:" HorizontalAlignment="Left" Margin="750,235,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="GuassianBlur" Content="Rozmycie Gauusa" HorizontalAlignment="Left" Margin="714,320,0,0" VerticalAlignment="Top" Width="110" Click="GuassianBlur_Click"/>
+        <Button x:Name="CannyEdge" Content="Krawędzie Canny" HorizontalAlignment="Left" Margin="714,362,0,0" VerticalAlignment="Top" Width="110" Click="CannyEdge_Click"/>
+        <Button x:Name="BlackWhite" Content="Czarno-białe" HorizontalAlignment="Left" Margin="714,403,0,0" VerticalAlignment="Top" Width="110" Click="BlackWhite_Click"/>
+        <Button x:Name="ColorSharpness" Content="Wyostrzenie kolorów" HorizontalAlignment="Left" Margin="706,445,0,0" VerticalAlignment="Top" Width="127" Click="ColorSharpness_Click"/>
+    </Grid>
+</Window>
